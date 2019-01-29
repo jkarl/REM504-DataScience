@@ -1,15 +1,15 @@
-###Sam "Jake" Price
-###29 Jan 2019
-###Rem 504
+### Sam "Jake" Price
+### 29 Jan 2019
+### Rem 504
 
-#Individual Study Plan
-##Courses
-1. Introduction to R (completed)
-2. Intermediate R (February 15)
-3. Data Visualization with ggplot2 part 1 (March 1)
-4. Data Manipulation in R with dplyr (March 15)
-5. Inference for Linear Regression (April 1)
-6. Hierarchical and Mixed Effect Models (May 1)
+# Individual Study Plan
+## Courses
+* Introduction to R (completed)
+* Intermediate R (February 15)
+* Data Visualization with ggplot2 part 1 (March 1)
+* Data Manipulation in R with dplyr (March 15)
+* Inference for Linear Regression (April 1)
+* Hierarchical and Mixed Effect Models (May 1)
 
 I am not terribly good with R at the moment. Currently, I am using it primarily
 for an applied regression course I am taking. For now, I just need a basic
