@@ -1,6 +1,7 @@
-Sam "Jake" Price
-29 Jan 2019
-Rem 504
+###Sam "Jake" Price
+###29 Jan 2019
+###Rem 504
+
 #Individual Study Plan
 ##Courses
 1. Introduction to R (completed)
