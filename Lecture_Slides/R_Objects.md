@@ -4,6 +4,8 @@ R is an object-based language, and just about everything you do in R creates or 
 ## What is an Object?
 __Objects__ in programming are defined types of data that have a pre-defined set of attributes and/or things they can do. This is a super simple explanation (there are whole classes on this concept!), but will work for our purposes. Objects are instances of __Classes__ which describe the objects and what they can do. Classes can also be organized hierarchically and objects can inherit properties or functions from other class types higher up the chain.
 
+<img src="../memes/OOP - inheritance.jpg" width="300">
+
 An good illustration of hierarchical classes is found in the "sp" package for spatial analysis. The most basic unit in sp is the __Spatial__ class. Objects in this class have generic properties like a bounding box, and a coordinate system, and the Spatial class defines operations for adding, dropping, and subsetting/selecting data. However, you never really directly work with Spatial class objects.
 
 A __child__ of the Spatial class is the __SpatialPoints__ class. Objects from this class inherit all of the properties and methods of the Spatial Class, but it adds things like coordinates for individual points and functions for plotting, summarizing, and accessing the point coordinates.
