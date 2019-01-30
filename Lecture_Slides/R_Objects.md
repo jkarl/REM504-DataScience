@@ -1,6 +1,19 @@
 # Understanding R Objects
 R is an object-based language, and just about everything you do in R creates or uses objects. A large portion of most analyses and projects in R is managing and converting object types. Here is some basic information on different R objects and data types.
 
+## What is an Object?
+__Objects__ in programming are defined types of data that have a pre-defined set of attributes and/or things they can do. This is a super simple explanation (there are whole classes on this concept!), but will work for our purposes. Objects are instances of __Classes__ which describe the objects and what they can do. Classes can also be organized hierarchically and objects can inherit properties or functions from other class types higher up the chain.
+
+An good illustration of hierarchical classes is found in the "sp" package for spatial analysis. The most basic unit in sp is the __Spatial__ class. Objects in this class have generic properties like a bounding box, and a coordinate system, and the Spatial class defines operations for adding, dropping, and subsetting/selecting data. However, you never really directly work with Spatial class objects.
+
+A __child__ of the Spatial class is the __SpatialPoints__ class. Objects from this class inherit all of the properties and methods of the Spatial Class, but it adds things like coordinates for individual points and functions for plotting, summarizing, and accessing the point coordinates.
+
+Further down, as a child of the SpatialPoints class is the __SpatialPointsDataFrame__ class. Objects in this class are sets of points that have attribute/tabular data associated with them. Remember, though, that a spatial points data frame will have all of the information and functions of the Spatial and SpatialPoints classes.
+
+The trick with R, especially when you get into more complicated packages like sp, is to figure out what class type your objects are and what class type they need to be in. For example, you can plot either a set of SpatialPoints (points with no data) or a SpatialPointsDataFrame (points with data) because that function is defined at the SpatialPoints class level. However, you can't do inverse-distance weighted estimates of an indicator with just a set of SpatialPoints, because that function needs the attribute data in a SpatialPointsDataFrame.
+
+Clear as mud, right?
+
 ## Some very helpful R functions for objects
 Sometimes in R you will have objects and you don't know what type they are. Two really helpful functions to use are __class()__ which outputs the class of an object and __typeof()__ which tells you how R is storing the values.
 ```
@@ -34,7 +47,7 @@ Finally, the __summary()__ function is useful for getting summaries and some add
 > summary(x.vector)
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    1.00    2.25    3.50    3.50    4.75    6.00
-   > d.frame <- data.frame("x"=c(1,2,3,4,5,6),y=c("a","b","b","a","a","a"))
+   > d.frame <- data.frame(x=c(1,2,3,4,5,6),y=c("a","b","b","a","a","a"))
 > summary(d.frame)
             x      y
     Min.   :1.00   a:4
