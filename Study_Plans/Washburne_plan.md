@@ -2,7 +2,7 @@
 ### Jan 31 2019 
 ### REM 504 
 
-# STUDY PLAN 
+# Study Plan
 
 ## Courses (_Tentative Complete-By Date_) 
 
