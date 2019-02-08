@@ -4,7 +4,7 @@
 
 # Study Plan
 
-## Courses ###(Tentative Complete-By Date) _Actual Complete-By Date_
+## Courses (Tentative Complete-By Date) _Actual Complete-By Date_
 
 * Introduction to R (Feb. 1) _Feb. 7_
 * Importing Data Pt. 1 (Feb. 6) _Feb. 8_
