@@ -4,11 +4,10 @@
 
 # Study Plan
 
-## Courses (_Tentative Complete-By Date_) 
+## Courses (Tentative Complete-By Date) _Actual Complete-By Date_
 
-* Introduction to R (Feb. 1)
-* Pivot Tables w/ Spreadsheets (Feb. 1)
-* Importing Data Pt. 1 (Feb. 6)
+* Introduction to R (Feb. 1) _Feb. 7_
+* Importing Data Pt. 1 (Feb. 6) _Feb. 8_
 * Importing Data Pt. 2 (Feb. 6)
 * Cleaning Data in R (Feb. 13)
 * Intermediate R (Feb. 13) 
