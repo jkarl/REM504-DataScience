@@ -67,11 +67,13 @@ gps.data <- data.frame()
 # iterate over each sheet in the excel file and append it to the data frame
 for (current.sheet in excel.sheets) {
   sheet.data <- read_excel(multi.excel.file, sheet=current.sheet, col_names=FALSE)
+  names(sheet.data) <- c("pdop","lat","lon","numSats","date","time","ttff","ttlf","ttbf")
+  sheet.data$collar <- current.sheet
   gps.data <- rbind(gps.data,sheet.data)
 }
 
 # in the case of my data, I didn't have column names, so add those now
-names(gps.data) <- c("pdop","lat","lon","numSats","date","time","ttff","ttlf","ttbf")
+
 
 
 ###########################################################
