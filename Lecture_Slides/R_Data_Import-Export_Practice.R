@@ -15,11 +15,11 @@ excel.file <- "Lander-HAF_preferred_species_cover-031215.xlsx"
 multi.excel.file <- "GPS_Collars_Example.xlsx"
 web.file <- "ftp://ftp.ncdc.noaa.gov/pub/data/noaa/isd-history.csv"
 
-data.path <- "C:\\Users\\jakal\\OneDrive - University of Idaho\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets"
+data.path <- "C:\\Users\\sjpri\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets"
 
 ## Set a working directory (this will work for today, but I don't normally do this.)
 setwd(data.path)
-
+mydata<-read_excel(multi.excel.file,col_names = F)
 ###########################################################
 ## Reading from CSV files
 ###########################################################

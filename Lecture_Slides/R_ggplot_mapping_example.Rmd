@@ -8,20 +8,20 @@ This is basic example of how to create maps with ggplot. We're using some data l
 ```{r}
 library(ggplot2) ## Plotting
 library(rgdal)  ## Reading/writing spatial files
-library(maptools)
+library(maptools)  ## Just what it says
 library(dplyr)
 
 
 ## I'm going to be lazy and set the working directory today.
-data.path <- "C:\\Users\\Jason Karl\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets"
-setwd(data.path)
+data.path <- "~/GitHub/REM504-DataScience/Practice_Datasets"
 
 ## Read in a couple of shapefiles
-countries <- readOGR(dsn="countries.shp",layer="countries") # Specify the shapefile as the data source name
-countries <- readOGR(dsn="C:\\Users\\Jason Karl\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets",layer="countries") # Also works to specify "." as dsn
+countries <- readOGR(dsn=file.path(data.path,"countries.shp"),layer="countries") # Specify the shapefile as the data source name
+countries <- readOGR(dsn=data.path,layer="countries") # Also works to specify "." as dsn
+
 countries.dd <- spTransform(countries, CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs +towgs84=0,0,0")) # My countries were in a projected coordinate system. Needed to convert to geographic decimal decrees
 
-plos_blocks <- readOGR(dsn="C:\\Users\\Jason Karl\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets", layer="PLOS_re_5deg_blocks",stringsAsFactors = FALSE)
+plos_blocks <- readOGR(dsn=data.path, layer="PLOS_re_5deg_blocks",stringsAsFactors = FALSE)
 ```
 
 ### Crappy plots
@@ -34,8 +34,8 @@ plot(plos_blocks)
 ### Building a map with ggplot
 You can use ggplot to build maps from spatial objects in R. You just need a couple of extra layers to the ggplot function.
 ```{r}
-countries.dd@data$id <- row.names(countries.dd@data)
-countries.df <- fortify(countries.dd, group=id)
+countries.dd@data$id <- row.names(countries.dd@data)  # Assign ID numbers to the spatial data
+countries.df <- fortify(countries.dd, group=id)  # Fortify converts a spatial data frame into a regular data frame. ggplot can't handle spatial data frames.
 map <- ggplot()+
   geom_polygon(data=countries.df, aes(x=long,y=lat,group=group), # Add the countries
                fill="#DDDDDD",color="#AAAAAA",size=0.5)+ #make them look 
@@ -43,7 +43,9 @@ map <- ggplot()+
 map
 
 ```
+
 OK. That's basic, but it's a start. Let's apply some styling and clean up the borders
+
 ```{r}
 map <- map + labs(x="", y="", title="PLOS Article Locations, RegEx Parser")+
   theme(axis.ticks.y = element_blank(), axis.text.y = element_blank(),
@@ -53,7 +55,9 @@ map <- map + labs(x="", y="", title="PLOS Article Locations, RegEx Parser")+
         #plot.margin = unit(c(0,0,0,0),"points"))
 map
 ```
+
 That's starting to look pretty close to what we want. Let's add the 5-degree blocks and color-code them by article count.
+
 ```{r}
 plos_blocks@data$id <- row.names(plos_blocks@data)
 block.verts <- fortify(plos_blocks, region="id") # Fortify turns a Spatial Data Frame into a regular data frame. GGPLOT needs regular data frames.
@@ -73,14 +77,19 @@ map+geom_polygon(data=blocks.df, # Add the polygons
                       breaks = c(1,3,5,8,21),guide=FALSE) #guides=FALSE turns off the legend.
 ```
 
+
 Let's remake that figure using a google map service as the background. We'll use the ggmap library for this.
+
 ```{r}
 library(ggmap)
-map <- get_googlemap(center=c(lat=0,lon=0), zoom=2, size=c(640,500), scale=2) %>% ggmap(extent="device") + coord_map()
+register_google(key="AIzaSyAPJEb0s-bblSQ9fIjxUxND4GY72-bPoaA")
+map <- get_googlemap(center=c(lat=0,lon=0), zoom=2, scale=2) %>% ggmap(extent="device") + coord_map()
 map + geom_polygon(data=blocks.df, aes(x=long,y=lat,group=group,fill=PNT_COUNT),alpha=0.8,color="black",size=0.5)+
   scale_fill_manual(values=c('#ffffd4','#fee391','#fec44f','#fe9929','#ec7014','#cc4c02','#8c2d04'), breaks = c(1,3,5,8,21),guide=FALSE)
 ```
+
 Well, need to play around with the extents, sizing, etc., but you get the idea. ggmap gives access to other map tile services too like Open Streetmap and Stamen Maps. Pretty helpful for if/when you just need to drop some features on top of a generic basemap.
+
 
 ### Dynamic maps with Leaflet
 What about if you wanted to have some dynamic/interactive maps? The Leaflet package can do that!
