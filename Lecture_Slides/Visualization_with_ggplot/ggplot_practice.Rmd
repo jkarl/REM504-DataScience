@@ -27,7 +27,7 @@ base_graph # Need to call this object to display it.
 OK, that's a great start, but the two different simulations are all in there together. Let's try separating them by color by adding a color aesthetic.
 
 ```{r}
-base_graph <- ggplot(data=ht_data, aes(x=plot.average, y=aim.sum, color=num.plants)) + geom_point()
+base_graph <- ggplot(data=ht_data, aes(x=plot.average, y=aim.sum)) + geom_point(aes(color=num.plants))
 base_graph # Need to call this object to display it.
 ```
 
@@ -90,7 +90,7 @@ color_graphs
 
 ## Check out colorbrewer2.org!
 ## ggplot can do a nice job with pre-defined color schemes.
-color_graphs <- pretty_graphs + scale_fill_brewer(palette="Dark2") +
+color_graphs <- pretty_graphs + scale_fill_brewer(palette="Accent") +
                 theme(legend.position="none")              # Get rid of the legend
 color_graphs
 
