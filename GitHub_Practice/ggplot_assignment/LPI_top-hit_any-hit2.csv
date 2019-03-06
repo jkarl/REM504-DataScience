@@ -1,0 +1,861 @@
+﻿Plot,Veg,1ST_HIT,ANY_HIT
+D1-ARTRV 1,AG,0,0
+D1-ARTRV 10,AG,0,0
+D1-ARTRV 2,AG,0,0
+D1-ARTRV 3,AG,0,0
+Bare 3,AG,0,0
+Bare 5,AG,0,0
+Bitner 2,AG,0,0.007
+Board Corral 1,AG,0,0
+Bull Creek 3,AG,0,0
+Bull Creek 5,AG,0,0
+Clover Creek Unburned1,AG,0,0.02
+Crooks Lake 1,AG,0,0
+Crooks Lake 2,AG,0,0
+Denio N Burned 1,AG,0,0
+Dry Valley 1,AG,0,0
+Home Camp 2,AG,0,0
+Home Camp 4,AG,0,0.007
+Home Camp 7,AG,0,0
+Horse Lake 2,AG,0,0
+Long Valley 1,AG,0,0.007
+Massacre Lakes 1,AG,0,0
+Massacre Lakes 3,AG,0,0
+Massacre Mountain 3,AG,0,0
+Nevada Coleman 1,AG,0,0
+Nevada Coleman 4,AG,0,0
+New Bailey Creek 2,AG,0,0
+North Ash Valley 1,AG,0,0
+Tuledad 5,AG,0,0.02
+Tuledad 7,AG,0,0
+Twin Peaks 39,AG,0,0
+Nut Mountain 2,AG,0,0
+Portuguese Flat 2,AG,0,0
+Ravendale Amp 4,AG,0,0
+Sand Creek 2,AG,0,0.093
+South Ash Valley 1,AG,0,0
+South Fork 1,AG,0,0
+Tule Mountain 1,AG,0,0.013
+Wall Canyon West 1,AG,0,0.007
+Wall Canyon West 2,AG,0,0
+Wall Canyon West 4,AG,0,0
+WCW B1,AG,0,0
+Bare 4,AG,0.007,0.007
+Bare 8,AG,0.007,0.013
+Bull Creek 2,AG,0.007,0.047
+Denio 1,AG,0.007,0.013
+Home Camp 8,AG,0.007,0.007
+Lost Creek Unburned 2,AG,0.007,0.027
+Mcdonald Mountain 2,AG,0.007,0.027
+Nevada Coleman 3,AG,0.007,0.007
+North Horse Lake 1,AG,0.007,0.02
+Tuledad 1,AG,0.007,0.02
+Tuledad 4,AG,0.007,0.013
+Twin Peaks 37,AG,0.007,0.013
+Twin Peaks 50,AG,0.007,0.007
+A-ARAR 2,AG,0.013,0.013
+Deep Cut 9,AG,0.013,0.047
+Denio N Unburned 1,AG,0.013,0.033
+North Ash Valley 2,AG,0.013,0.02
+Ravendale AMP 3,AG,0.013,0.013
+Twin Peaks 23,AG,0.013,0.02
+Ravendale Amp 2,AG,0.013,0.027
+Silva Flat 1,AG,0.013,0.013
+A-ARTRW 1,AG,0.02,0.02
+A-ARTRW 6,AG,0.02,0.02
+Home Camp 6,AG,0.02,0.04
+Massacre Mountain 2,AG,0.02,0.073
+Observation 20,AG,0.02,0.027
+Nut Mountain 1,AG,0.02,0.033
+Slate Creek 1,AG,0.02,0.02
+Twin Peaks 6,AG,0.02,0.053
+Bare 1,AG,0.027,0.04
+Bull Creek 4,AG,0.027,0.027
+Observation 11,AG,0.027,0.027
+Observation 19,AG,0.027,0.027
+Tuledad 10,AG,0.027,0.033
+Twin Peaks 1,AG,0.027,0.027
+Twin Peaks 41,AG,0.027,0.033
+Ravendale Amp 1,AG,0.027,0.06
+Sand Creek 1,AG,0.027,0.04
+South Horse Lake 2,AG,0.027,0.053
+A-ARTRT 2,AG,0.033,0.033
+A-ARTRT 3,AG,0.033,0.033
+Moon Springs 1,AG,0.033,0.06
+Nevada Cowhead 1,AG,0.033,0.053
+Bare 2,AG,0.04,0.067
+Home Camp 3,AG,0.04,0.053
+Observation 14,AG,0.04,0.047
+Observation 9,AG,0.04,0.053
+Tuledad 11,AG,0.04,0.06
+Twin Peaks 35,AG,0.04,0.04
+Shaffer 1,AG,0.04,0.073
+South Larkspur 2,AG,0.04,0.093
+Home Camp 5,AG,0.047,0.127
+Mcdonald Mountain 1,AG,0.047,0.093
+Tuledad 8,AG,0.047,0.08
+Lost Creek Burned 2,AG,0.053,0.053
+South Larkspur 1,AG,0.053,0.067
+Clover Creek Burned 1,AG,0.06,0.06
+Erick 1,AG,0.06,0.06
+Muck Valley 3,AG,0.06,0.08
+Twin Peaks 21,AG,0.06,0.073
+Twin Peaks 3,AG,0.06,0.087
+South Horse Lake 1,AG,0.06,0.08
+A-ARTRV 4,AG,0.067,0.067
+North Fort Sage 1,AG,0.067,0.12
+Stone 1,AG,0.067,0.073
+Twin Peaks 7,AG,0.067,0.073
+Willow Creek 1,AG,0.067,0.093
+D3-ARTRW 1,AG,0.073,0.08
+Bare 6,AG,0.073,0.107
+Duck Lake 1,AG,0.073,0.187
+Twin Peaks 11,AG,0.073,0.073
+Twin Peaks 45,AG,0.073,0.08
+A-ARTRW 9,AG,0.08,0.087
+Deep Cut 8,AG,0.08,0.093
+Observation 8,AG,0.08,0.233
+Twin Peaks 43,AG,0.08,0.087
+Twin Peaks 46,AG,0.08,0.107
+A-ARTRW 5,AG,0.087,0.1
+Twin Peaks 13,AG,0.087,0.093
+Twin Peaks 40,AG,0.087,0.087
+Snowstorm 1,AG,0.087,0.207
+Snowstorm 4,AG,0.087,0.153
+A-ARTRW 2,AG,0.093,0.093
+Duck Lake 2,AG,0.093,0.133
+Twin Peaks 29,AG,0.093,0.14
+Portuguese Flat 1,AG,0.093,0.127
+Observation 12,AG,0.1,0.107
+Twin Peaks 16,AG,0.1,0.12
+Rice Canyon 1,AG,0.1,0.113
+Fandango 1,AG,0.107,0.18
+Observation 1,AG,0.107,0.133
+Observation 15,AG,0.107,0.113
+Tuledad 2,AG,0.107,0.153
+Twin Peaks 9,AG,0.107,0.153
+Winter Range NV 2,AG,0.107,0.133
+D3-ARTRW 2,AG,0.113,0.133
+Sand Creek 4,AG,0.113,0.16
+A-ARAR 3,AG,0.12,0.133
+Lost Creek Unburned 1,AG,0.12,0.167
+Twin Peaks 17,AG,0.12,0.18
+Twin Peaks 34,AG,0.12,0.16
+Bare 7,AG,0.133,0.213
+Observation 4,AG,0.133,0.133
+Twin Peaks 20,AG,0.133,0.173
+Twin Peaks 22,AG,0.133,0.147
+Twin Peaks 31,AG,0.133,0.14
+Twin Peaks 38,AG,0.133,0.187
+Twin Peaks 4,AG,0.133,0.2
+Twin Peaks 44,AG,0.133,0.14
+A-ARTRV 3,AG,0.14,0.16
+Lost Creek Burned 1,AG,0.14,0.14
+Observation 18,AG,0.14,0.167
+A-ARTRW 4,AG,0.147,0.153
+Snowstorm 3,AG,0.153,0.233
+D1-ARTRV 4,AG,0.16,0.16
+Observation 17,AG,0.16,0.187
+Twin Peaks 36,AG,0.16,0.26
+Twin Peaks 48,AG,0.16,0.207
+A-ARAR 1,AG,0.167,0.18
+D3-ARTRW 3,AG,0.167,0.18
+Deep Cut 1,AG,0.167,0.22
+Observation 16,AG,0.167,0.207
+Winter Range CA 2,AG,0.167,0.173
+Observation 2,AG,0.173,0.193
+Observation 6,AG,0.173,0.193
+Tuledad 9,AG,0.173,0.327
+Twin Peaks 25,AG,0.173,0.193
+Winter Range NV 1,AG,0.193,0.207
+D3-ARTRW 5,AG,0.2,0.213
+New Bailey Creek 1,AG,0.2,0.213
+Observation 10,AG,0.2,0.213
+Twin Peaks 18,AG,0.2,0.207
+Spanish Springs Amp 1,AG,0.207,0.247
+Twin Peaks 24,AG,0.207,0.24
+Deep Cut 5,AG,0.213,0.233
+Twin Peaks 28,AG,0.213,0.273
+Twin Peaks 49,AG,0.213,0.267
+Hogback 1,AG,0.233,0.267
+Massacre Lakes 2,AG,0.233,0.333
+North Tablelands 1,AG,0.233,0.26
+A-ARTRV 1,AG,0.24,0.247
+Twin Peaks 10,AG,0.247,0.267
+Twin Peaks 32,AG,0.247,0.247
+Twin Peaks 5,AG,0.247,0.253
+Twin Peaks 12,AG,0.267,0.3
+D3-ARTRW 8,AG,0.273,0.273
+Twin Peaks 8,AG,0.273,0.3
+Twin Peaks 14,AG,0.28,0.293
+A-ARTRT 1,AG,0.287,0.3
+Twin Peaks 26,AG,0.287,0.313
+Twin Peaks 47,AG,0.287,0.333
+Flournoy Individual 1,AG,0.293,0.373
+Twin Peaks 33,AG,0.3,0.313
+D3-ARTRW 7,AG,0.313,0.333
+Deep Cut 3,AG,0.327,0.34
+Bend 1,AG,0.333,0.573
+Wall Canyon West 5,AG,0.333,0.353
+Observation 3,AG,0.34,0.393
+Twin Peaks 42,AG,0.347,0.367
+Wall Canyon West 3,AG,0.347,0.42
+Mosquito Valley 2,AG,0.36,0.387
+Sand Creek 3,AG,0.36,0.52
+Muck Valley 2,AG,0.367,0.407
+Deep Cut 2,AG,0.387,0.42
+Twin Peaks 2,AG,0.393,0.447
+Twin Peaks 30,AG,0.393,0.413
+Deep Cut 7,AG,0.4,0.433
+East Beaver Creek 1,AG,0.4,0.427
+Observation 7,AG,0.407,0.447
+Deep Cut 4,AG,0.427,0.487
+Rocky Prairie 1,AG,0.44,0.507
+D3-ARTRW 6,AG,0.453,0.48
+South Tablelands 1,AG,0.473,0.48
+D3-ARTRW 10,AG,0.48,0.493
+D1-ARTRV 1,PG,0.347,0.38
+D1-ARTRV 10,PG,0.08,0.087
+D1-ARTRV 2,PG,0.08,0.093
+D1-ARTRV 3,PG,0.02,0.02
+Bare 3,PG,0.133,0.153
+Bare 5,PG,0.007,0.007
+Bitner 2,PG,0.107,0.133
+Board Corral 1,PG,0.22,0.3
+Bull Creek 3,PG,0.173,0.26
+Bull Creek 5,PG,0,0
+Clover Creek Unburned1,PG,0.16,0.267
+Crooks Lake 1,PG,0.073,0.14
+Crooks Lake 2,PG,0.12,0.18
+Denio N Burned 1,PG,0.087,0.093
+Dry Valley 1,PG,0.033,0.047
+Home Camp 2,PG,0.147,0.153
+Home Camp 4,PG,0.06,0.073
+Home Camp 7,PG,0.16,0.193
+Horse Lake 2,PG,0.02,0.04
+Long Valley 1,PG,0.007,0.027
+Massacre Lakes 1,PG,0.213,0.253
+Massacre Lakes 3,PG,0.287,0.313
+Massacre Mountain 3,PG,0.013,0.047
+Nevada Coleman 1,PG,0.2,0.267
+Nevada Coleman 4,PG,0.233,0.273
+New Bailey Creek 2,PG,0.273,0.4
+North Ash Valley 1,PG,0.067,0.113
+Tuledad 5,PG,0,0.007
+Tuledad 7,PG,0,0
+Twin Peaks 39,PG,0.307,0.36
+Nut Mountain 2,PG,0.013,0.02
+Portuguese Flat 2,PG,0.127,0.147
+Ravendale Amp 4,PG,0.267,0.367
+Sand Creek 2,PG,0.1,0.247
+South Ash Valley 1,PG,0.053,0.107
+South Fork 1,PG,0.133,0.213
+Tule Mountain 1,PG,0.067,0.167
+Wall Canyon West 1,PG,0.24,0.3
+Wall Canyon West 2,PG,0.16,0.16
+Wall Canyon West 4,PG,0.12,0.14
+WCW B1,PG,0.153,0.153
+Bare 4,PG,0.087,0.1
+Bare 8,PG,0.127,0.173
+Bull Creek 2,PG,0.167,0.227
+Denio 1,PG,0.007,0.033
+Home Camp 8,PG,0.233,0.293
+Lost Creek Unburned 2,PG,0.127,0.18
+Mcdonald Mountain 2,PG,0.147,0.213
+Nevada Coleman 3,PG,0.193,0.207
+North Horse Lake 1,PG,0.167,0.233
+Tuledad 1,PG,0.047,0.073
+Tuledad 4,PG,0.027,0.073
+Twin Peaks 37,PG,0,0
+Twin Peaks 50,PG,0.1,0.14
+A-ARAR 2,PG,0.267,0.287
+Deep Cut 9,PG,0.007,0.033
+Denio N Unburned 1,PG,0.06,0.1
+North Ash Valley 2,PG,0.14,0.18
+Ravendale AMP 3,PG,0.153,0.207
+Twin Peaks 23,PG,0,0
+Ravendale Amp 2,PG,0.073,0.18
+Silva Flat 1,PG,0,0
+A-ARTRW 1,PG,0.14,0.14
+A-ARTRW 6,PG,0.047,0.053
+Home Camp 6,PG,0.067,0.087
+Massacre Mountain 2,PG,0.06,0.087
+Observation 20,PG,0.173,0.22
+Nut Mountain 1,PG,0.033,0.04
+Slate Creek 1,PG,0.173,0.28
+Twin Peaks 6,PG,0.16,0.207
+Bare 1,PG,0,0
+Bull Creek 4,PG,0.127,0.153
+Observation 11,PG,0.2,0.24
+Observation 19,PG,0.133,0.147
+Tuledad 10,PG,0.08,0.14
+Twin Peaks 1,PG,0.067,0.067
+Twin Peaks 41,PG,0.027,0.027
+Ravendale Amp 1,PG,0.047,0.087
+Sand Creek 1,PG,0,0
+South Horse Lake 2,PG,0.22,0.26
+A-ARTRT 2,PG,0.14,0.14
+A-ARTRT 3,PG,0.047,0.047
+Moon Springs 1,PG,0.333,0.367
+Nevada Cowhead 1,PG,0.153,0.187
+Bare 2,PG,0,0
+Home Camp 3,PG,0.04,0.067
+Observation 14,PG,0.087,0.133
+Observation 9,PG,0.24,0.26
+Tuledad 11,PG,0.073,0.107
+Twin Peaks 35,PG,0.293,0.307
+Shaffer 1,PG,0.193,0.3
+South Larkspur 2,PG,0.18,0.253
+Home Camp 5,PG,0,0.007
+Mcdonald Mountain 1,PG,0.093,0.24
+Tuledad 8,PG,0.167,0.253
+Lost Creek Burned 2,PG,0.093,0.113
+South Larkspur 1,PG,0.06,0.1
+Clover Creek Burned 1,PG,0.133,0.14
+Erick 1,PG,0.167,0.187
+Muck Valley 3,PG,0.133,0.167
+Twin Peaks 21,PG,0.06,0.073
+Twin Peaks 3,PG,0.053,0.08
+South Horse Lake 1,PG,0.167,0.193
+A-ARTRV 4,PG,0.087,0.093
+North Fort Sage 1,PG,0.167,0.227
+Stone 1,PG,0.087,0.087
+Twin Peaks 7,PG,0,0
+Willow Creek 1,PG,0.027,0.053
+D3-ARTRW 1,PG,0,0
+Bare 6,PG,0.073,0.073
+Duck Lake 1,PG,0.307,0.34
+Twin Peaks 11,PG,0.04,0.073
+Twin Peaks 45,PG,0.073,0.093
+A-ARTRW 9,PG,0.253,0.267
+Deep Cut 8,PG,0.033,0.047
+Observation 8,PG,0.173,0.28
+Twin Peaks 43,PG,0.053,0.067
+Twin Peaks 46,PG,0.073,0.087
+A-ARTRW 5,PG,0.08,0.1
+Twin Peaks 13,PG,0.04,0.04
+Twin Peaks 40,PG,0.127,0.127
+Snowstorm 1,PG,0.127,0.167
+Snowstorm 4,PG,0.253,0.333
+A-ARTRW 2,PG,0.02,0.02
+Duck Lake 2,PG,0,0.013
+Twin Peaks 29,PG,0.02,0.02
+Portuguese Flat 1,PG,0.053,0.073
+Observation 12,PG,0.067,0.073
+Twin Peaks 16,PG,0.027,0.047
+Rice Canyon 1,PG,0,0
+Fandango 1,PG,0.08,0.153
+Observation 1,PG,0.013,0.013
+Observation 15,PG,0.087,0.093
+Tuledad 2,PG,0.013,0.067
+Twin Peaks 9,PG,0,0
+Winter Range NV 2,PG,0.033,0.033
+D3-ARTRW 2,PG,0.1,0.113
+Sand Creek 4,PG,0.2,0.233
+A-ARAR 3,PG,0.087,0.113
+Lost Creek Unburned 1,PG,0,0.027
+Twin Peaks 17,PG,0.167,0.22
+Twin Peaks 34,PG,0.113,0.127
+Bare 7,PG,0,0
+Observation 4,PG,0.013,0.013
+Twin Peaks 20,PG,0.147,0.167
+Twin Peaks 22,PG,0.053,0.113
+Twin Peaks 31,PG,0.027,0.033
+Twin Peaks 38,PG,0,0.007
+Twin Peaks 4,PG,0.107,0.147
+Twin Peaks 44,PG,0.12,0.14
+A-ARTRV 3,PG,0.02,0.027
+Lost Creek Burned 1,PG,0.12,0.12
+Observation 18,PG,0.1,0.1
+A-ARTRW 4,PG,0.107,0.113
+Snowstorm 3,PG,0.233,0.26
+D1-ARTRV 4,PG,0.113,0.12
+Observation 17,PG,0.027,0.053
+Twin Peaks 36,PG,0.02,0.02
+Twin Peaks 48,PG,0.007,0.007
+A-ARAR 1,PG,0.133,0.147
+D3-ARTRW 3,PG,0.02,0.02
+Deep Cut 1,PG,0.18,0.2
+Observation 16,PG,0.013,0.04
+Winter Range CA 2,PG,0.013,0.013
+Observation 2,PG,0.087,0.093
+Observation 6,PG,0.073,0.073
+Tuledad 9,PG,0,0
+Twin Peaks 25,PG,0.047,0.047
+Winter Range NV 1,PG,0.093,0.093
+D3-ARTRW 5,PG,0.007,0.007
+New Bailey Creek 1,PG,0.06,0.067
+Observation 10,PG,0.153,0.16
+Twin Peaks 18,PG,0.013,0.013
+Spanish Springs Amp 1,PG,0.113,0.113
+Twin Peaks 24,PG,0.013,0.027
+Deep Cut 5,PG,0.027,0.04
+Twin Peaks 28,PG,0.047,0.053
+Twin Peaks 49,PG,0.2,0.247
+Hogback 1,PG,0,0
+Massacre Lakes 2,PG,0.06,0.08
+North Tablelands 1,PG,0,0
+A-ARTRV 1,PG,0.053,0.053
+Twin Peaks 10,PG,0.02,0.033
+Twin Peaks 32,PG,0,0
+Twin Peaks 5,PG,0.113,0.127
+Twin Peaks 12,PG,0,0.007
+D3-ARTRW 8,PG,0,0
+Twin Peaks 8,PG,0.02,0.02
+Twin Peaks 14,PG,0.013,0.033
+A-ARTRT 1,PG,0.06,0.073
+Twin Peaks 26,PG,0.007,0.007
+Twin Peaks 47,PG,0.087,0.127
+Flournoy Individual 1,PG,0.093,0.147
+Twin Peaks 33,PG,0,0
+D3-ARTRW 7,PG,0.007,0.007
+Deep Cut 3,PG,0.02,0.02
+Bend 1,PG,0.067,0.093
+Wall Canyon West 5,PG,0.1,0.133
+Observation 3,PG,0.04,0.053
+Twin Peaks 42,PG,0.013,0.013
+Wall Canyon West 3,PG,0.027,0.027
+Mosquito Valley 2,PG,0.26,0.267
+Sand Creek 3,PG,0,0
+Muck Valley 2,PG,0.027,0.027
+Deep Cut 2,PG,0.053,0.053
+Twin Peaks 2,PG,0,0.007
+Twin Peaks 30,PG,0,0
+Deep Cut 7,PG,0,0
+East Beaver Creek 1,PG,0.013,0.02
+Observation 7,PG,0.073,0.093
+Deep Cut 4,PG,0,0
+Rocky Prairie 1,PG,0.027,0.027
+D3-ARTRW 6,PG,0.053,0.067
+South Tablelands 1,PG,0,0
+D3-ARTRW 10,PG,0.033,0.04
+D1-ARTRV 1,FB,0.16,0.16
+D1-ARTRV 10,FB,0.067,0.067
+D1-ARTRV 2,FB,0.167,0.173
+D1-ARTRV 3,FB,0.107,0.113
+Bare 3,FB,0.067,0.073
+Bare 5,FB,0.047,0.047
+Bitner 2,FB,0.04,0.047
+Board Corral 1,FB,0.027,0.053
+Bull Creek 3,FB,0,0.007
+Bull Creek 5,FB,0.027,0.053
+Clover Creek Unburned1,FB,0.04,0.06
+Crooks Lake 1,FB,0.013,0.013
+Crooks Lake 2,FB,0.087,0.133
+Denio N Burned 1,FB,0.1,0.1
+Dry Valley 1,FB,0.04,0.04
+Home Camp 2,FB,0.067,0.067
+Home Camp 4,FB,0.027,0.033
+Home Camp 7,FB,0.007,0.013
+Horse Lake 2,FB,0,0
+Long Valley 1,FB,0,0.007
+Massacre Lakes 1,FB,0.073,0.093
+Massacre Lakes 3,FB,0.08,0.1
+Massacre Mountain 3,FB,0.02,0.053
+Nevada Coleman 1,FB,0.007,0.013
+Nevada Coleman 4,FB,0.027,0.033
+New Bailey Creek 2,FB,0,0
+North Ash Valley 1,FB,0,0
+Tuledad 5,FB,0,0
+Tuledad 7,FB,0,0
+Twin Peaks 39,FB,0.02,0.027
+Nut Mountain 2,FB,0,0
+Portuguese Flat 2,FB,0.073,0.073
+Ravendale Amp 4,FB,0.02,0.047
+Sand Creek 2,FB,0.007,0.033
+South Ash Valley 1,FB,0.02,0.027
+South Fork 1,FB,0.007,0.02
+Tule Mountain 1,FB,0.02,0.047
+Wall Canyon West 1,FB,0.04,0.06
+Wall Canyon West 2,FB,0.053,0.053
+Wall Canyon West 4,FB,0.073,0.087
+WCW B1,FB,0.067,0.067
+Bare 4,FB,0.007,0.007
+Bare 8,FB,0.08,0.087
+Bull Creek 2,FB,0.073,0.12
+Denio 1,FB,0.067,0.107
+Home Camp 8,FB,0.08,0.087
+Lost Creek Unburned 2,FB,0.02,0.027
+Mcdonald Mountain 2,FB,0.007,0.02
+Nevada Coleman 3,FB,0.053,0.06
+North Horse Lake 1,FB,0.02,0.027
+Tuledad 1,FB,0.107,0.147
+Tuledad 4,FB,0,0
+Twin Peaks 37,FB,0,0
+Twin Peaks 50,FB,0.02,0.053
+A-ARAR 2,FB,0.053,0.067
+Deep Cut 9,FB,0.02,0.027
+Denio N Unburned 1,FB,0.007,0.007
+North Ash Valley 2,FB,0,0
+Ravendale AMP 3,FB,0.04,0.053
+Twin Peaks 23,FB,0,0
+Ravendale Amp 2,FB,0.04,0.047
+Silva Flat 1,FB,0.32,0.32
+A-ARTRW 1,FB,0.093,0.093
+A-ARTRW 6,FB,0.1,0.12
+Home Camp 6,FB,0.013,0.027
+Massacre Mountain 2,FB,0.013,0.02
+Observation 20,FB,0.02,0.04
+Nut Mountain 1,FB,0.033,0.047
+Slate Creek 1,FB,0.007,0.007
+Twin Peaks 6,FB,0.013,0.013
+Bare 1,FB,0,0
+Bull Creek 4,FB,0.013,0.02
+Observation 11,FB,0.067,0.1
+Observation 19,FB,0.08,0.093
+Tuledad 10,FB,0.087,0.113
+Twin Peaks 1,FB,0.133,0.133
+Twin Peaks 41,FB,0.08,0.093
+Ravendale Amp 1,FB,0.067,0.087
+Sand Creek 1,FB,0,0
+South Horse Lake 2,FB,0.033,0.04
+A-ARTRT 2,FB,0.08,0.1
+A-ARTRT 3,FB,0.147,0.153
+Moon Springs 1,FB,0.013,0.013
+Nevada Cowhead 1,FB,0.013,0.02
+Bare 2,FB,0,0
+Home Camp 3,FB,0.007,0.02
+Observation 14,FB,0.013,0.02
+Observation 9,FB,0.113,0.127
+Tuledad 11,FB,0.033,0.053
+Twin Peaks 35,FB,0.033,0.047
+Shaffer 1,FB,0.047,0.067
+South Larkspur 2,FB,0,0
+Home Camp 5,FB,0.027,0.027
+Mcdonald Mountain 1,FB,0.053,0.073
+Tuledad 8,FB,0.027,0.047
+Lost Creek Burned 2,FB,0.033,0.033
+South Larkspur 1,FB,0.013,0.013
+Clover Creek Burned 1,FB,0.033,0.033
+Erick 1,FB,0.013,0.013
+Muck Valley 3,FB,0.067,0.073
+Twin Peaks 21,FB,0.107,0.107
+Twin Peaks 3,FB,0.033,0.053
+South Horse Lake 1,FB,0,0
+A-ARTRV 4,FB,0.047,0.06
+North Fort Sage 1,FB,0.02,0.033
+Stone 1,FB,0.06,0.06
+Twin Peaks 7,FB,0.127,0.133
+Willow Creek 1,FB,0,0
+D3-ARTRW 1,FB,0.073,0.08
+Bare 6,FB,0,0
+Duck Lake 1,FB,0,0
+Twin Peaks 11,FB,0.133,0.147
+Twin Peaks 45,FB,0.16,0.16
+A-ARTRW 9,FB,0.033,0.04
+Deep Cut 8,FB,0.06,0.06
+Observation 8,FB,0.02,0.033
+Twin Peaks 43,FB,0.073,0.073
+Twin Peaks 46,FB,0.04,0.047
+A-ARTRW 5,FB,0.12,0.127
+Twin Peaks 13,FB,0.12,0.133
+Twin Peaks 40,FB,0.107,0.12
+Snowstorm 1,FB,0.027,0.033
+Snowstorm 4,FB,0.013,0.027
+A-ARTRW 2,FB,0.107,0.113
+Duck Lake 2,FB,0,0
+Twin Peaks 29,FB,0.013,0.013
+Portuguese Flat 1,FB,0.027,0.033
+Observation 12,FB,0.093,0.1
+Twin Peaks 16,FB,0.013,0.02
+Rice Canyon 1,FB,0.127,0.133
+Fandango 1,FB,0.047,0.053
+Observation 1,FB,0.007,0.007
+Observation 15,FB,0.093,0.1
+Tuledad 2,FB,0.027,0.047
+Twin Peaks 9,FB,0.007,0.007
+Winter Range NV 2,FB,0.08,0.093
+D3-ARTRW 2,FB,0.26,0.267
+Sand Creek 4,FB,0,0
+A-ARAR 3,FB,0.093,0.12
+Lost Creek Unburned 1,FB,0.007,0.013
+Twin Peaks 17,FB,0.04,0.06
+Twin Peaks 34,FB,0.073,0.08
+Bare 7,FB,0.007,0.013
+Observation 4,FB,0.08,0.087
+Twin Peaks 20,FB,0.053,0.06
+Twin Peaks 22,FB,0.12,0.147
+Twin Peaks 31,FB,0.067,0.08
+Twin Peaks 38,FB,0.173,0.18
+Twin Peaks 4,FB,0.04,0.06
+Twin Peaks 44,FB,0.033,0.047
+A-ARTRV 3,FB,0.293,0.353
+Lost Creek Burned 1,FB,0.04,0.04
+Observation 18,FB,0.06,0.093
+A-ARTRW 4,FB,0.047,0.053
+Snowstorm 3,FB,0.08,0.113
+D1-ARTRV 4,FB,0.113,0.127
+Observation 17,FB,0.087,0.153
+Twin Peaks 36,FB,0,0
+Twin Peaks 48,FB,0.02,0.027
+A-ARAR 1,FB,0.087,0.093
+D3-ARTRW 3,FB,0.14,0.147
+Deep Cut 1,FB,0.04,0.047
+Observation 16,FB,0.04,0.04
+Winter Range CA 2,FB,0.033,0.04
+Observation 2,FB,0.08,0.093
+Observation 6,FB,0.2,0.213
+Tuledad 9,FB,0,0
+Twin Peaks 25,FB,0.2,0.213
+Winter Range NV 1,FB,0,0.013
+D3-ARTRW 5,FB,0.133,0.153
+New Bailey Creek 1,FB,0.02,0.02
+Observation 10,FB,0.16,0.193
+Twin Peaks 18,FB,0.047,0.047
+Spanish Springs Amp 1,FB,0.113,0.147
+Twin Peaks 24,FB,0.013,0.02
+Deep Cut 5,FB,0.12,0.14
+Twin Peaks 28,FB,0.033,0.04
+Twin Peaks 49,FB,0.033,0.053
+Hogback 1,FB,0.053,0.06
+Massacre Lakes 2,FB,0.007,0.007
+North Tablelands 1,FB,0.033,0.04
+A-ARTRV 1,FB,0.053,0.06
+Twin Peaks 10,FB,0.107,0.127
+Twin Peaks 32,FB,0.033,0.033
+Twin Peaks 5,FB,0.08,0.1
+Twin Peaks 12,FB,0.033,0.047
+D3-ARTRW 8,FB,0.08,0.08
+Twin Peaks 8,FB,0.193,0.2
+Twin Peaks 14,FB,0.047,0.073
+A-ARTRT 1,FB,0.093,0.12
+Twin Peaks 26,FB,0.04,0.053
+Twin Peaks 47,FB,0.093,0.1
+Flournoy Individual 1,FB,0.02,0.02
+Twin Peaks 33,FB,0.047,0.047
+D3-ARTRW 7,FB,0.153,0.153
+Deep Cut 3,FB,0.033,0.047
+Bend 1,FB,0.06,0.087
+Wall Canyon West 5,FB,0.007,0.007
+Observation 3,FB,0.14,0.16
+Twin Peaks 42,FB,0.027,0.033
+Wall Canyon West 3,FB,0.04,0.087
+Mosquito Valley 2,FB,0.013,0.013
+Sand Creek 3,FB,0,0
+Muck Valley 2,FB,0.047,0.053
+Deep Cut 2,FB,0.033,0.033
+Twin Peaks 2,FB,0.073,0.107
+Twin Peaks 30,FB,0.06,0.08
+Deep Cut 7,FB,0.113,0.16
+East Beaver Creek 1,FB,0.013,0.02
+Observation 7,FB,0.187,0.247
+Deep Cut 4,FB,0.16,0.173
+Rocky Prairie 1,FB,0.147,0.167
+D3-ARTRW 6,FB,0.093,0.12
+South Tablelands 1,FB,0.073,0.08
+D3-ARTRW 10,FB,0.067,0.073
+D1-ARTRV 1,SH,0.013,0.013
+D1-ARTRV 10,SH,0.02,0.02
+D1-ARTRV 2,SH,0.007,0.007
+D1-ARTRV 3,SH,0.053,0.053
+Bare 3,SH,0.08,0.087
+Bare 5,SH,0,0
+Bitner 2,SH,0.16,0.167
+Board Corral 1,SH,0.207,0.213
+Bull Creek 3,SH,0.2,0.2
+Bull Creek 5,SH,0.22,0.233
+Clover Creek Unburned1,SH,0.32,0.32
+Crooks Lake 1,SH,0.2,0.213
+Crooks Lake 2,SH,0.213,0.267
+Denio N Burned 1,SH,0.02,0.02
+Dry Valley 1,SH,0.133,0.147
+Home Camp 2,SH,0.013,0.013
+Home Camp 4,SH,0.24,0.24
+Home Camp 7,SH,0.16,0.16
+Horse Lake 2,SH,0.44,0.44
+Long Valley 1,SH,0.233,0.233
+Massacre Lakes 1,SH,0.06,0.06
+Massacre Lakes 3,SH,0.047,0.047
+Massacre Mountain 3,SH,0.327,0.327
+Nevada Coleman 1,SH,0.253,0.253
+Nevada Coleman 4,SH,0.147,0.147
+New Bailey Creek 2,SH,0.107,0.107
+North Ash Valley 1,SH,0.133,0.14
+Tuledad 5,SH,0.107,0.107
+Tuledad 7,SH,0.213,0.213
+Twin Peaks 39,SH,0.12,0.12
+Nut Mountain 2,SH,0.12,0.12
+Portuguese Flat 2,SH,0.06,0.06
+Ravendale Amp 4,SH,0.213,0.227
+Sand Creek 2,SH,0.533,0.533
+South Ash Valley 1,SH,0.007,0.007
+South Fork 1,SH,0.107,0.127
+Tule Mountain 1,SH,0.167,0.193
+Wall Canyon West 1,SH,0.233,0.24
+Wall Canyon West 2,SH,0,0
+Wall Canyon West 4,SH,0.153,0.167
+WCW B1,SH,0,0
+Bare 4,SH,0.147,0.147
+Bare 8,SH,0.147,0.147
+Bull Creek 2,SH,0.413,0.413
+Denio 1,SH,0.233,0.233
+Home Camp 8,SH,0.113,0.12
+Lost Creek Unburned 2,SH,0.327,0.327
+Mcdonald Mountain 2,SH,0.047,0.067
+Nevada Coleman 3,SH,0.093,0.093
+North Horse Lake 1,SH,0.167,0.187
+Tuledad 1,SH,0.18,0.213
+Tuledad 4,SH,0.367,0.373
+Twin Peaks 37,SH,0.193,0.193
+Twin Peaks 50,SH,0.4,0.407
+A-ARAR 2,SH,0.08,0.08
+Deep Cut 9,SH,0.373,0.393
+Denio N Unburned 1,SH,0.18,0.18
+North Ash Valley 2,SH,0.067,0.08
+Ravendale AMP 3,SH,0.2,0.2
+Twin Peaks 23,SH,0.113,0.113
+Ravendale Amp 2,SH,0.507,0.507
+Silva Flat 1,SH,0,0
+A-ARTRW 1,SH,0,0
+A-ARTRW 6,SH,0.013,0.013
+Home Camp 6,SH,0.12,0.12
+Massacre Mountain 2,SH,0.227,0.227
+Observation 20,SH,0.18,0.2
+Nut Mountain 1,SH,0.233,0.233
+Slate Creek 1,SH,0.24,0.247
+Twin Peaks 6,SH,0.207,0.227
+Bare 1,SH,0.18,0.18
+Bull Creek 4,SH,0.173,0.173
+Observation 11,SH,0.033,0.04
+Observation 19,SH,0.147,0.153
+Tuledad 10,SH,0.26,0.267
+Twin Peaks 1,SH,0.027,0.027
+Twin Peaks 41,SH,0.053,0.053
+Ravendale Amp 1,SH,0.447,0.453
+Sand Creek 1,SH,0.107,0.107
+South Horse Lake 2,SH,0.1,0.107
+A-ARTRT 2,SH,0,0
+A-ARTRT 3,SH,0.007,0.007
+Moon Springs 1,SH,0.007,0.007
+Nevada Cowhead 1,SH,0.347,0.353
+Bare 2,SH,0.187,0.193
+Home Camp 3,SH,0.253,0.267
+Observation 14,SH,0.127,0.153
+Observation 9,SH,0.033,0.033
+Tuledad 11,SH,0.187,0.207
+Twin Peaks 35,SH,0.053,0.053
+Shaffer 1,SH,0.32,0.333
+South Larkspur 2,SH,0.22,0.233
+Home Camp 5,SH,0.253,0.253
+Mcdonald Mountain 1,SH,0.273,0.347
+Tuledad 8,SH,0.267,0.273
+Lost Creek Burned 2,SH,0.013,0.013
+South Larkspur 1,SH,0.207,0.207
+Clover Creek Burned 1,SH,0.013,0.013
+Erick 1,SH,0.14,0.153
+Muck Valley 3,SH,0.133,0.133
+Twin Peaks 21,SH,0.093,0.093
+Twin Peaks 3,SH,0.1,0.1
+South Horse Lake 1,SH,0.14,0.153
+A-ARTRV 4,SH,0.053,0.08
+North Fort Sage 1,SH,0.16,0.16
+Stone 1,SH,0.133,0.133
+Twin Peaks 7,SH,0.133,0.153
+Willow Creek 1,SH,0.167,0.187
+D3-ARTRW 1,SH,0,0
+Bare 6,SH,0.16,0.167
+Duck Lake 1,SH,0.153,0.153
+Twin Peaks 11,SH,0.127,0.133
+Twin Peaks 45,SH,0.007,0.007
+A-ARTRW 9,SH,0,0
+Deep Cut 8,SH,0.06,0.06
+Observation 8,SH,0.34,0.36
+Twin Peaks 43,SH,0.08,0.08
+Twin Peaks 46,SH,0.127,0.127
+A-ARTRW 5,SH,0.02,0.027
+Twin Peaks 13,SH,0.007,0.007
+Twin Peaks 40,SH,0.04,0.04
+Snowstorm 1,SH,0.333,0.34
+Snowstorm 4,SH,0.22,0.253
+A-ARTRW 2,SH,0,0
+Duck Lake 2,SH,0.12,0.127
+Twin Peaks 29,SH,0.1,0.107
+Portuguese Flat 1,SH,0.007,0.013
+Observation 12,SH,0.013,0.013
+Twin Peaks 16,SH,0.187,0.193
+Rice Canyon 1,SH,0.007,0.007
+Fandango 1,SH,0.267,0.28
+Observation 1,SH,0.107,0.107
+Observation 15,SH,0.007,0.007
+Tuledad 2,SH,0.28,0.287
+Twin Peaks 9,SH,0.107,0.107
+Winter Range NV 2,SH,0.073,0.073
+D3-ARTRW 2,SH,0.007,0.013
+Sand Creek 4,SH,0.087,0.093
+A-ARAR 3,SH,0.04,0.053
+Lost Creek Unburned 1,SH,0.16,0.16
+Twin Peaks 17,SH,0.213,0.26
+Twin Peaks 34,SH,0.067,0.073
+Bare 7,SH,0.167,0.167
+Observation 4,SH,0.007,0.007
+Twin Peaks 20,SH,0.013,0.02
+Twin Peaks 22,SH,0.153,0.153
+Twin Peaks 31,SH,0.027,0.027
+Twin Peaks 38,SH,0.02,0.027
+Twin Peaks 4,SH,0.253,0.273
+Twin Peaks 44,SH,0.193,0.22
+A-ARTRV 3,SH,0.067,0.067
+Lost Creek Burned 1,SH,0.007,0.007
+Observation 18,SH,0.027,0.027
+A-ARTRW 4,SH,0.033,0.033
+Snowstorm 3,SH,0.047,0.047
+D1-ARTRV 4,SH,0,0
+Observation 17,SH,0.087,0.113
+Twin Peaks 36,SH,0.133,0.133
+Twin Peaks 48,SH,0.407,0.42
+A-ARAR 1,SH,0,0
+D3-ARTRW 3,SH,0.007,0.007
+Deep Cut 1,SH,0.073,0.08
+Observation 16,SH,0.14,0.16
+Winter Range CA 2,SH,0.027,0.027
+Observation 2,SH,0.02,0.02
+Observation 6,SH,0.02,0.02
+Tuledad 9,SH,0.22,0.22
+Twin Peaks 25,SH,0.013,0.013
+Winter Range NV 1,SH,0.02,0.02
+D3-ARTRW 5,SH,0,0
+New Bailey Creek 1,SH,0.12,0.127
+Observation 10,SH,0,0
+Twin Peaks 18,SH,0,0
+Spanish Springs Amp 1,SH,0.007,0.007
+Twin Peaks 24,SH,0.113,0.12
+Deep Cut 5,SH,0.04,0.047
+Twin Peaks 28,SH,0.187,0.193
+Twin Peaks 49,SH,0.087,0.1
+Hogback 1,SH,0.213,0.247
+Massacre Lakes 2,SH,0.227,0.24
+North Tablelands 1,SH,0.06,0.08
+A-ARTRV 1,SH,0,0
+Twin Peaks 10,SH,0.013,0.013
+Twin Peaks 32,SH,0,0
+Twin Peaks 5,SH,0.007,0.007
+Twin Peaks 12,SH,0.133,0.147
+D3-ARTRW 8,SH,0,0
+Twin Peaks 8,SH,0.027,0.027
+Twin Peaks 14,SH,0.013,0.013
+A-ARTRT 1,SH,0.007,0.013
+Twin Peaks 26,SH,0.08,0.087
+Twin Peaks 47,SH,0.153,0.153
+Flournoy Individual 1,SH,0.193,0.233
+Twin Peaks 33,SH,0.067,0.067
+D3-ARTRW 7,SH,0.02,0.02
+Deep Cut 3,SH,0.007,0.007
+Bend 1,SH,0.013,0.013
+Wall Canyon West 5,SH,0.02,0.02
+Observation 3,SH,0.14,0.153
+Twin Peaks 42,SH,0.08,0.08
+Wall Canyon West 3,SH,0.113,0.113
+Mosquito Valley 2,SH,0,0
+Sand Creek 3,SH,0.22,0.227
+Muck Valley 2,SH,0.047,0.053
+Deep Cut 2,SH,0.02,0.02
+Twin Peaks 2,SH,0.133,0.167
+Twin Peaks 30,SH,0.04,0.04
+Deep Cut 7,SH,0.007,0.007
+East Beaver Creek 1,SH,0.013,0.013
+Observation 7,SH,0.013,0.02
+Deep Cut 4,SH,0,0
+Rocky Prairie 1,SH,0.027,0.033
+D3-ARTRW 6,SH,0.013,0.013
+South Tablelands 1,SH,0.013,0.013
+D3-ARTRW 10,SH,0,0
