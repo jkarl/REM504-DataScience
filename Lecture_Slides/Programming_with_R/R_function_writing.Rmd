@@ -9,7 +9,7 @@ You'll often find yourself wanting to repeat a series of steps in R. While it is
 
 ## The Basics
 
-Functions exist like other objects in R, and so you create them by assigning the output from __function()__ them to a name.
+Functions exist like other objects in R, and so you create them by assigning the output from __function()__ to a name.
 
 ```{r, warning=FALSE}
 # First, let's attach the tidyverse packages for later
@@ -23,6 +23,8 @@ party
 
 ## But if you call the function, R will run the contents
 party()
+
+## It does absolutely nothing!
 
 ```
 
@@ -46,6 +48,7 @@ Functions don't need to be reactive to the user. In the example of __party()__ a
 Functions that don't take arguments have limited applications, which is why most functions take at least one argument. Generally, we write functions because we want to be able to predictably repeat the same steps with minor variations, so we need to be able to tell the function what to change when we call it.
 
 A function doesn't operate in the global environment though! Each function spins off its own environment every time it's called and runs all of its code in that environment. So, basically a pocket universe, Star Trek-style. The only things that a function brings into its environment are the values for its arguments. In the case of __rock.on()__, we can make it reactive so that it will take an argument for a name to paste it to the end of "PARTY HARD".
+
 ```{r}
 ## All the arguments for your function are listed like arguments to function() itself
 ## Whatever values you provide for them will be the defaults
@@ -58,14 +61,14 @@ rock.on <- function(name = "buddy"){
 rock.on()
 
 ## But we could put anything that paste() can use there
-rock.on(name = "Irulan")
+rock.on(name = "Jake")
 ```
 
 It's extremely important to remember that any named value/object you use in the body of the function either needs to be made within the function or come into the environment as an argument! You won't know that you've accidentally referenced something that isn't in the function environment until you try to run it and get an "object not found" error.
 
 ## Outputs
 
-Functions can be complicated and involve a lot of intermediate objects, but we're rarely interested in anything except the final output. Luckily, functions don't just spit out everything they produce as they run. In the same way that arguments are the way to get values into a function's environment, we use __return()__ to get values back out.
+Functions can be complicated and involve a lot of intermediate objects, but we're rarely interested in anything except the final output. Luckily, functions don't just spit out everything they produce as they run. In fact, once the function is done running, everything the function created is deleted. In the same way that arguments are the way to get values into a function's environment, we use __return()__ to get the values or objects we want back out of the function.
 ```{r}
 ## A function for making a string either upper or lower case
 case.change <- function(string, new.case){
@@ -109,7 +112,7 @@ case.change(string = "much better", new.case = "upper")
 case.change(string = "much better", new.case = "both")
 ```
 
-When your function calls __return()__, it stops running and returns whatever is provided to __return()__. If you had additional code after __return()__, your function doesn't care and won't execute it, so make sure that you only use __return()__ in a place in your code where you're ready to stop. You can always have more than one __return()__ call in a function though, if there are multiple possible endpoints in the code.
+When your function calls __return()__, it stops running and returns whatever is provided to __return()__. If you had additional code after __return()__, your function doesn't care and won't execute it, so make sure that you only use __return()__ in a place in your code where you're ready to stop. You can always have more than one __return()__ call in a function though, if there are multiple possible endpoints in the code. This is generally considered to be poor coding form, however. It's usually best to collect all the various possibilities and then issue a single __return()__ call at the end of the function.
 
 ## Error Handling
 
@@ -117,9 +120,9 @@ Why should your functions have error handling built in? Why bother to have them 
 
 There are three major ways to handle this: __message()__, __warning()__, and __stop()__.
 
-* __message()__ Produces a string in the console, letting the user know what's happening in the function as the code is executing.
-* __warning()__ Does the same thing, but the strings are classed slightly differently by R. It's intended to let users know that something might've gone wrong.
-* __stop()__ Also produces a string in the console, but brings the execution of the code to a stop. This is for when something is wrong enough to break things.
+  - __message()__ Produces a string in the console, letting the user know what's happening in the function as the code is executing.
+  - __warning()__ Does the same thing, but the strings are classed slightly differently by R. It's intended to let users know that something might've gone wrong.
+  - __stop()__ Also produces a string in the console, but brings the execution of the code to a stop. This is for when something is wrong enough to break things.
 
 Using __message()__ to report what step a function is on or what iteration through a loop can be really helpful for diagnosing what's going on when you're getting errors
 

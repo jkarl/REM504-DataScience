@@ -3,19 +3,25 @@ title: "Iteration and Looping"
 output: html_notebook
 ---
 
-Conditionals in R
+## Conditionals in R
+Conditionals are statements that evaluate a logical statement and then make a choice. They are a simple programming concept that can build in a lot of power and flexibility to your R scripting. The most straight-forward of the conditional statements are the simple __if__ and __if/else__.
+
+Remember that the symbol for logical equivalence is the double equal sign __==__.
 ```{r}
+# Simple if statement
 day <- "Tuesday"
 if (day=="Tuesday") {
   print("today")
 }
 
+# Simple if/else example
 if (day=="Monday") {
   print("yesterday")
 } else {
   print("not yesterday")
 }
 
+# more complicated if/else example
 if (day=="Monday") {
   print("yesterday")
 } else if (day=="Tuesday") {
@@ -24,22 +30,57 @@ if (day=="Monday") {
   print("not yesterday")
 }
 ```
+Anything that evaluates to __TRUE__ or __FALSE__ can be put into a conditional statement. You can also use the logical operators __&__(and), __|__(or), or __!__(not) in your conditional statements.
+```{r}
+library(lubridate)  # This is an amazing package!
+julian.date <- yday(today())
+yr <- year(today())
+if (julian.date >= 65) {
+  print("It's after March 6th")
+}
+
+if (julian.date != 65) {
+  print("It's not March 6th")
+}
+
+if (julian.date == 65 & yr == 2019) {
+  print("March 6th, 2019")
+}
+
+```
 
 
-
+## Iteration and looping
 Iteration and looping in R is useful for when you need to do the same operation over a set of objects, datasets, or observations, or when you want to run some simulations. You can easily set up iteration in R over multiple variables (as long as you can keep your head around that they're doing!). The basic iterator in R is the __for()__ function.
 
 Check out this example of the basic for loop syntax.
 ```{r}
-library(dplyr) #this is for somemthing else, not iteration
-
 for (i in 1:10) {  # Basic structure 
   print(i)        # i is the "iterator". It's a counter in this case.
 }
 ```
- You can also iterate over lists of objects
- 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+One important thing to note about iterating using __for__ in R is that R takes care of moving through all of the iterations on it's own. In the example above, you don't need to tick __i__ up by one each time. (This is not always the case with other programming languages!).
+
+Another iterator in R is __while__. While is useful for when you need to repeat something until you meet some sort of condition - i.e., you don't know how many times you want to repeat ahead of time. Examples of this would be running a simulation until it stabilizes or reaches some threshold, or recursive parsing of a document for text patterns. _Be careful with while(), though, because it's easy to get into never-ending (infinite) loops._
+
+```{r}
+# simple while example to replicate a for loop
+i <- 0
+while (i < 10) {
+  print(i)
+  i<-i+1  # Need to count up i by one each time in this case.
+}
+
+now <- Sys.time()
+while (Sys.time() < now+10) {
+  print("waiting...")
+}
+print("It's now 10 seconds later!")
+
+```
+
+
+You can also iterate over lists of objects. This becomes really powerful if you need to do the same thing over a bunch of datasets.
 ```{r}
 for (month in c("Jan","Feb","Mar","Apr","May")) {
   print(month)
@@ -48,21 +89,19 @@ for (month in c("Jan","Feb","Mar","Apr","May")) {
 
 Use different R functions to create sets of objects to iterate over
 ```{r}
-for (rand.num in rnorm(12)) {
+for (rand.num in rnorm(12)) { # Iterate over a set of 12 random numbers
   print(paste("The Random number is: ",rand.num))
 }
 ```
 
 Grab a list of files from a directory and iterate over those
 ```{r}
-data.path <- "C:\\Users\\Jason Karl\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets"
+data.path <- "C:\\Users\\jakal\\OneDrive - University of Idaho\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets"
 files <- list.files(data.path,pattern="*.csv")
-i <- 1 # set up a counter here so we can load the datasets iteratively
 out.data <- c()
 for (file in files) {
   print(file)
   out.data[[file]]<-read.csv(paste(data.path,file,sep="\\"))
-  i<-i+1
 }
 ```
 
@@ -73,8 +112,8 @@ for (i in 1:10) {
   var.rand <- rnorm(1)
   var.now <- date()
   var.other <- "Jason"
-  out.row <- data.frame(i=i, rand=var.rand, now=var.now, me=var.other)
-  out.data <- rbind(out.data,out.row)
+  out.row <- data.frame(i=i, rand=var.rand, now=var.now, me=var.other) # Assemble your new data
+  out.data <- rbind(out.data,out.row) # Append it to your out dataframe
 }
 glimpse(out.data)
 ```
@@ -83,15 +122,14 @@ glimpse(out.data)
 You can also nest for loops
 ```{r}
 out.data <- data.frame() # set up an empty data frame
-for (i in 1:10) {
-  for (j in 1:15) {
-    var.rand <- rnorm(1)
-    var.now <- date()
-    var.other <- "Jason"
-    out.row <- data.frame(i=i, j=j, rand=var.rand, now=var.now, me=var.other)
+for (x in seq(-3,3,by=0.1)) {  # Note use of seq() here.
+  for (y in seq(-3,3,by=0.1)) {
+    z <- exp(-((x-0)^2/2+(y-0)^2/2)) ## 2D gaussian formula with mean zero and variance of 1
+    out.row <- data.frame(x=x, y=y, z=z)
     out.data <- rbind(out.data,out.row)
   }
 }
 glimpse(out.data)
+ggplot(data=out.data,aes(x=x,y=y,fill=z))+geom_raster()
 ```
 
