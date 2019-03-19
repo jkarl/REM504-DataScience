@@ -61,7 +61,7 @@ rock.on <- function(name = "buddy"){
 rock.on()
 
 ## But we could put anything that paste() can use there
-rock.on(name = "Jake")
+rock.on("Jake")
 ```
 
 It's extremely important to remember that any named value/object you use in the body of the function either needs to be made within the function or come into the environment as an argument! You won't know that you've accidentally referenced something that isn't in the function environment until you try to run it and get an "object not found" error.
