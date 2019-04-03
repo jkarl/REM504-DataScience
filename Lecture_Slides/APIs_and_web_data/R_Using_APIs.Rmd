@@ -26,7 +26,7 @@ print(elev)
 2. Well, that's a start. It definitely works. Now let's get the values for a set of points.
 ```{r}
 # Load in a CSV file of Cow GPS locations (Exciting!)
-cow.locs <- read.csv("C:\\Users\\Jason Karl\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets\\Cow_14_GPS_July_2017.csv", header=T, stringsAsFactors = F)
+cow.locs <- read.csv("C:\\Users\\jakal\\OneDrive - University of Idaho\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets\\Cow_14_GPS_July_2017.csv", header=T, stringsAsFactors = F)
 
 # This dataset is really big (and messy), let's just grab 20 rows
 cow.locs <- cow.locs %>% sample_n(20)

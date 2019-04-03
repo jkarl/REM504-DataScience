@@ -1,5 +1,6 @@
 # Understanding APIs for Data Access
-<img src="./img/OReilly_Restful_APIs.jpg" width="60%" height="60%">
+<img src="../img/OReilly_Restful_APIs.jpg" width="60%" height="60%">
+
 The use of Application Programming Interfaces (APIs, also called Web Services) for data access and download is becoming increasingly popular. An API transfers data over the web via HTTP protocols. However, there are lots of different styles/flavors of APIs, and their use (and usefulness) isn't always clear. In order to understand how, when, and why you'd want to use an API (and as importantly how, when and why NOT), we need to cover some basic concepts of APIs and web protocols.
 
 ## HTTP protocol - how the web works

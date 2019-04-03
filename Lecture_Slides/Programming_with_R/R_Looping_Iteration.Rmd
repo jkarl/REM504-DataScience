@@ -30,7 +30,10 @@ if (day=="Monday") {
   print("not yesterday")
 }
 ```
+
 Anything that evaluates to __TRUE__ or __FALSE__ can be put into a conditional statement. You can also use the logical operators __&__(and), __|__(or), or __!__(not) in your conditional statements.
+
+
 ```{r}
 library(lubridate)  # This is an amazing package!
 julian.date <- yday(today())

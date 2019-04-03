@@ -14,7 +14,7 @@ library(tidyr)
 library(sqldf)
 
 ## Load some data to play with.
-path <- "C:\\Users\\Jason Karl\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets\\relational_data"
+path <- "C:\\Users\\jakal\\OneDrive - University of Idaho\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets\\relational_data"
 tblSpecies <- read.csv(paste(path,"tblSpecies.csv",sep='\\'),header=T,stringsAsFactors=F)
 tblPlots <- read.csv(paste(path,"tblPlots.csv",sep='\\'),header=T,stringsAsFactors=F)
 tblLines <- read.csv(paste(path,"tblLines.csv",sep='\\'),header=T,stringsAsFactors=F)
@@ -44,10 +44,10 @@ head(LPIlineplot)
 The tblLPIDetails field is where all the fine-grained observation data for LPI are stored. Observations from the different layers are stored in different fields, so first order of business is to strip out the fields we don't need and convert that to a long form.
 
 ```{r}
+tblLPIDetail$RecKey <- as.factor(tblLPIDetail$RecKey)
 tblLPIDetailLong <- tblLPIDetail %>%
   select("RecKey","TopCanopy","Lower1","Lower2","Lower3","Lower4","SoilSurface") %>%
-  gather(RecKey)
-names(tblLPIDetailLong)<-c("RecKey","Field","SppCode")
+  gather(Field,SppCode,2:7)
 head(tblLPIDetailLong)
 
 ## Next summarize to get the list of species per RecKey
