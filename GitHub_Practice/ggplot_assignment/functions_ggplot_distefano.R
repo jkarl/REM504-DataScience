@@ -41,7 +41,7 @@ data.plot$anyhit <- data.plot$anyhit * 100
 # Error: At least one layer must contain all faceting variables: `z`.
 # * Plot is missing `z`
 # * Layer 1 is missing `z`
-sean.ggplot <- function(df, ind = F, xlab, ylab, title) {
+sean.ggplot <- function(df, ind, xlab, ylab, title) {
   df.filter <- df %>% filter(indicator == ind)
   graph <- ggplot(data = df.filter, aes(x = firsthit, y = anyhit)) +
     geom_point() +
