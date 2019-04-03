@@ -4,7 +4,7 @@ Relational databases are common in ecological datasets because they're an effici
 ## Relational databases 101
 Generally, databases are considered relational when data is stored across multiple tables that are linked by common fields/attributes. By filtering and joining tables based on these common fields, you can store data very efficiently and reconstruct any data configuration or summary you need.
 
-<img src="img/relationaldb.gif">
+<img src="../img/relationaldb.gif">
 
 Relationships between tables can be:
 - one to one - each LPIHeader row has a SINGLE corresponding row in tblLPIDetail.
