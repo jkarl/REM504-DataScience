@@ -26,23 +26,24 @@ data.plot$firsthit <- data.plot$firsthit * 100
 data.plot$anyhit <- data.plot$anyhit * 100
 
 ## original code for plotting graphs
-ggplot(data.plot, aes(x = data.plot$firsthit, y = data.plot$anyhit)) +
-  geom_point() +
-  facet_wrap(vars(indicator)) +
-  geom_abline(linetype = "dashed", size = 1, colour = "red") +
-  geom_smooth(method = lm, se = F, fullrange = T, formula = y ~ x) +
-  xlab("Any Hit Cover %") +
-  ylab("First Hit Cover %") +
-  ggtitle("Comparison Between 2 Vegetative Cover Indicators") +
-  theme(text = element_text(size = 12), plot.title = element_text(hjust = 0.5))
+# ggplot(data.plot, aes(x = data.plot$firsthit, y = data.plot$anyhit)) +
+#   geom_point() +
+#   facet_wrap(vars(indicator)) +
+#   geom_abline(linetype = "dashed", size = 1, colour = "red") +
+#   geom_smooth(method = lm, se = F, fullrange = T, formula = y ~ x) +
+#   xlab("Any Hit Cover %") +
+#   ylab("First Hit Cover %") +
+#   ggtitle("Comparison Between 2 Vegetative Cover Indicators") +
+#   theme(text = element_text(size = 12), plot.title = element_text(hjust = 0.5))
 
 ## function to plot graphs
 # have errors when I try to have the faceted variable as an input
 # Error: At least one layer must contain all faceting variables: `z`.
 # * Plot is missing `z`
 # * Layer 1 is missing `z`
-sean.ggplot <- function(df, x, y, xlab = F, ylab = F, title = F) {
-  graph <- ggplot(data = df, aes(x = x, y = y)) +
+sean.ggplot <- function(df, ind = F, xlab, ylab, title) {
+  df.filter <- df %>% filter(indicator == ind)
+  graph <- ggplot(data = df.filter, aes(x = firsthit, y = anyhit)) +
     geom_point() +
     facet_wrap(~indicator) +
     geom_abline(linetype = "dashed", size = 1, colour = "red") +
@@ -56,8 +57,7 @@ sean.ggplot <- function(df, x, y, xlab = F, ylab = F, title = F) {
 }
 
 # plotting with function
-sean.ggplot(df = data.plot, 
-            x = data.plot$firsthit, y = data.plot$anyhit,
+sean.ggplot(df = data.plot, ind = data.plot$indicator,
             xlab = "Any Hit Cover %", ylab = "First Hit Cover %",
             title = "Comparison Between 2 Vegetative Cover Indicators")
 
