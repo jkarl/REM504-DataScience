@@ -111,7 +111,7 @@ SELECT * FROM tblPlotCover LEFT JOIN tblSpecies ON tblPlotCover.SppCode = tblSpe
 ### FULL JOIN
 A full join is the set equivalent of a union in GIS (_note though, that SQL has a UNION statement that does something different_). A full join will return a table that contains all records from both tables.
 
-<img src="img/fulljoin.gif" width="150">    <img src="img/fulljoin_example.gif" width="250">
+<img src="../img/fulljoin.gif" width="150">    <img src="../img/fulljoin_example.gif" width="250">
 ```
 SELECT * FROM tblPlotCover FULL JOIN tblSpecies ON tblPlotCover.SppCode = tblSpecies.SppCode;
 ```
