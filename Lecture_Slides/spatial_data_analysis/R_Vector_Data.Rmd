@@ -1,0 +1,114 @@
+---
+title: "R Spatial Data - Import, Attributes & Projections"
+output: html_notebook
+---
+
+Most people think of R as a statistics package or a toolset for processing/analyzing tabluar data. However, R is really great at spatial data analysis too. While it may not be user-interface driven like ArcGIS or QGIS, R (with the help of some packages) can do pretty much anything other GIS and remote sensing packages can do.
+
+In this Notebook, we'll explore options for importing vector and raster data, creating spatial data objects from tabluar data, accessing spatial attribute data, and handling projections and coordinate systems in R.
+
+```{r}
+# First we're going to need some packages for working with spatial data
+library(rgdal) # import/export and processing of spatial data
+library(sp) # spatial data processing/analysis functions
+library(raster) # raster data processing
+library(ggplot2) # plotting
+
+data.path <- "C:\\Users\\jakal\\OneDrive - University of Idaho\\Documents\\GitHub\\REM504-DataScience\\Practice_Datasets"
+```
+
+## Importing spatial data
+Importing spatial data into R isn't hard, we just need to have the right syntax. There are lots of ways to do this in R, and many packages have functions for reading different spatial data formats.
+
+```{r}
+# Import Vector Data with readOGR() - OGR stands for open geospatial reference. It's a set of coding libraries for reading/writing many different vector data formats.
+## For readOGR, you have to specify:
+###   dsn = data source name = directory where shapefile is located
+###   layer = name of the shapefile (without the .shp extension)
+countries <- readOGR(dsn=data.path,layer="countries_generalized")
+
+# Make a crappy plot
+plot(countries)
+
+# What type of object is it?
+class(countries)
+
+```
+
+## Spatial data objects
+The main spatial object types in R are:
+ - SpatialPoints / SpatialPointsDataFrame
+ - SpatialLines / SpatialLinesDataFrame
+ - SpatialPolygons / SpatialPolygonsDataFrame
+
+The difference between versions (e.g., spatialpoints vs spatialpointsdataframe) is that the data frame version can have attribute data associated with the geometry. The other version just has the shapes.
+
+_When working with spatial data functions in R, make sure you pay attention to what type of spatial data object it needs. Sometimes you can fudge it - e.g., you can give a spatialpointsdataframe to a function that wants just spatialpoints - but not always - e.g., you can't give a spatialpoints object to a function that needs a spatialpointsdataframe._
+ 
+## Creating Spatial Data from Tabluar Data
+You can create spatial data objects from tabular data where X and Y values are stored in fields. Note, though, that if you're just making a map/plot of the data you don't need to do this. Only necessary if you're going to use spatial data analysis functions (e.g., intersect, buffer, select by location).
+
+```{r}
+## Load a tabular dataset
+gps.data <- read.csv(file.path(data.path,"Cow_14_GPS_July_2017.csv"),header=T,stringsAsFactors = F)
+
+# Get the field names
+names(gps.data)
+
+# Check the object type
+class(gps.data)
+
+# Turn data frame into a spatial object with the coordinates() function
+coordinates(gps.data) <- ~Longitude+Latitude
+
+# Now check the class
+class(gps.data)
+
+```
+
+## Accessing attribute data in spatial objects
+Spatial data frame objects have attribute data stored for each shape. The spatial object, however, is stored as a list in R, so to access the attribute data you need to make sure you're pointed at the right slot in the list. Normally, this is automatic if you want to use functions like names() or call specific fields in the attribute data. However, for some operations it doesn't work that way and you need to specify the slot.
+```{r}
+# Get the names again
+names(gps.data)
+
+# Get the names by specifying the list slot for the attribute data. Should be the same
+names(gps.data@data)
+
+# List the first 10 dates in the attribute table
+gps.data$Date[1:10] # Works as expected.
+
+# List the first 10 rows in the attribute table
+gps.data[1:10,] # Doesn't work as expected
+
+gps.data@data[1:10,]
+
+```
+## Coordinate Systems and Projections
+Spatial data always are associated with a coordinate system that gives their locations in the real world (or in some other space). Some coordinate systems are angular (e.g., degrees, minutes, seconds or decimal degrees), and others are projected onto a flat surface and have a linear unit (Trust me. In depth explanation WAY beyond scope of this class). While apps like ArcGIS and QGIS will handle coordinate system transformations behind the scenes (and cover a multitude of sins), in R, you have to make sure that all the datasets you're working with are in the same coordinate system.
+
+```{r}
+# Most R spatial processing functions use the proj4 format for specifying coordinate system and projection info. For more info, see https://proj4.org/ or http://spatialreference.org/.
+
+# Find the coordinate system for the dataset
+proj4string(countries)
+crs(countries) # different function to do the same thing (in raster package)
+# if the shapefile has a .prj file, it will read the coordinate system info in for the spatial object
+
+# What's the projection for the gps.data?
+proj4string(gps.data)
+# oops...
+
+# Let's set the coodinate system for the gps.data
+wgs84.proj <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"  # get this from spatialreference.org
+proj4string(gps.data) <- wgs84.proj
+
+# OK, now reproject the GPS data to match the countries spatial coordinate system!
+## Get the proj4 string for the countries again
+countries.proj <- proj4string(countries)
+## use spTransform() to reproject. Need to use CRS() to make the proj4 string into a real coordinate system object.
+gps.data.merc <- spTransform(gps.data,CRS(countries.proj))
+
+summary(gps.data.merc)
+```
+

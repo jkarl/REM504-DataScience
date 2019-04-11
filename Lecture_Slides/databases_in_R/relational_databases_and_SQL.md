@@ -89,7 +89,7 @@ Joins are where the real magic of SQL happens. Joins basically let you merge att
 
 One of the most common joins are the left and right joins. In a left join, all the records from the "left" table are kept and the attributes from the right table are added for records that are in common to both tables.
 
-<img src="img/leftjoin.gif" width="150">    <img src="img/leftjoin_example.gif" width="250">
+<img src="../img/leftjoin.gif" width="150">    <img src="../img/leftjoin_example.gif" width="250">
 
 ```
 SELECT * FROM tblPlotCover LEFT JOIN tblSpecies ON tblPlotCover.SppCode = tblSpecies.SppCode;
@@ -97,12 +97,12 @@ SELECT * FROM tblPlotCover LEFT JOIN tblSpecies ON tblPlotCover.SppCode = tblSpe
 
 Right join is just the opposite.
 
-<img src="img/rightjoin_example.gif" width="250">
+<img src="../img/rightjoin_example.gif" width="250">
 
 ### INNER JOIN
 Inner join is the set equivalent of an intersect in GIS. It will return the set of records that are common to both input tables.
 
-<img src="img/innerjoin.gif" width="150">    <img src="img/innerjoin_example.gif" width="250">
+<img src="../img/innerjoin.gif" width="150">    <img src="../img/innerjoin_example.gif" width="250">
 
 ```
 SELECT * FROM tblPlotCover LEFT JOIN tblSpecies ON tblPlotCover.SppCode = tblSpecies.SppCode;

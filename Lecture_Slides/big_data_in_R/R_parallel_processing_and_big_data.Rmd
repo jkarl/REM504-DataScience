@@ -23,7 +23,7 @@ library(snowfall)
 x <- runif(10^7,1,10)
 
 ## First start the snowfall parallelization
-sfInit(parallel=FALSE, cpus=20) # setting parallel to FALSE basically makes it the same as running in regular R.
+sfInit(parallel=TRUE, cpus=20) # setting parallel to FALSE basically makes it the same as running in regular R.
 if( sfParallel() ) {
   cat( "Running in parallel mode on", sfCpus(), "nodes.\n" )
 } else {
