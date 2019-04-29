@@ -1,0 +1,121 @@
+---
+title: "R Raster Data Analysis"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+## Set up our environment
+library(rgdal)
+library(raster)
+library(rasterVis)
+library(RColorBrewer)
+
+data.path <- "C:/Users/jakal/OneDrive - University of Idaho/Documents/GitHub/REM504-DataScience/Practice_Datasets"
+ps.file <- "PlanetScope_SR_2017-08-14.tif"
+```
+Loading raster data in R is _EASY_. You just issue the raster() function and give it the name of a raster file.
+
+```{r}
+# First, let's get some info about the raster layer
+GDALinfo(file.path(data.path,ps.file))
+
+ps.image <- raster(file.path(data.path,ps.file)) # This will bring in only the first band
+
+ps.stack <- stack(file.path(data.path,ps.file))
+
+```
+
+Now let's explore this dataset a bit
+```{r}
+# Check extent and resolution
+extent(ps.image)
+res(ps.image)
+
+# Check the coordinate system
+crs(ps.image)
+
+```
+
+Let's look at these raster layers!
+```{r}
+# First plot the single band image
+
+## Set up a grayscale color gradient
+grayscale_colors <- gray.colors(100,            # number of different color levels 
+                                start = 0.0,    # how black (0) to go
+                                end = 1.0,      # how white (1) to go
+                                gamma = 2.2,    # correction between how a digital 
+                                # camera sees the world and how human eyes see it
+                                alpha = NULL) 
+
+plot(ps.image, col=grayscale_colors)
+
+## Now let's look at the multiband image
+levelplot(ps.stack) # shows each band separately
+
+plotRGB(ps.stack, r = 4, g = 3, b = 2, scale=10777) ## creates a RGB composite plot
+
+```
+
+## Raster operations
+Working on raster data in R is also pretty easy. The big tricks are to make sure you have your data in the same coordinate system and that they all have consistent resolution.
+
+```{r}
+
+# Aggregate to a coarser resolution
+ps.aggregate <- aggregate(ps.image,fact=8,fun=mean)
+plot(ps.aggregate)
+
+# Clip/crop/select
+points <- readOGR(dsn=data.path, layer="IBPEpoints")
+
+plot(ps.image)
+points(points)
+
+pts.extent <- extent(points)
+ps.crop <- crop(ps.image,pts.extent)
+plot(ps.crop)
+points(points)
+
+# extract values based on point locations
+pt.values <- extract(ps.image,points)
+pt.values
+
+## extract based on raster values
+
+# If you just want to create a mask with the values, then it's as easy as creating a logical statement.
+ps.7kmask <- ps.image > 7000 
+plot(ps.7kmask)
+
+## If you want the actual raster values, then need an extra step to apply the mask
+ps.extract <- mask(ps.image,ps.7kmask,maskvalue=T)
+plot(ps.extract)
+
+```
+
+
+## Raster math
+raster math is a general term for when you want to perform arithmetic operations on a cell-by-cell basis.
+Raster math is what you'd use to calculate an index like NDVI from a satellite image.
+
+```{r}
+# Calculate NDVI from the planetScope image
+ps.ndvi <- (ps.stack[[4]]-ps.stack[[3]])/(ps.stack[[4]]+ps.stack[[3]]) ## note the double-brackets for getting a specific band from the stack.
+plot(ps.ndvi)
+
+```
+
+## Zonal statistics
+Zonal statistics are calculated for distinct regions (zones) as defined by a polygon layer. In raster analysis this is super useful for calculating means, max, median, etc. for polygons. Let's calculate the average NDVI value for a buffer around each of the points. The zonal() function in R will do this, but your "zones" need to be defined as a raster first. Luckily, we can get the same answer with the extract() function in most cases.
+
+```{r}
+## Get the mean NDVI value for a 20m buffer around each point
+ndvi.buffer <- extract(ps.ndvi, points,buffer=20,fun=mean)
+ndvi.buffer
+
+```
+

@@ -12,7 +12,7 @@ output:
 This tutorial covers how to work with and plot raster time series data. The code and example datasets in this notebook were adapted from [NEON](http://www.neonscience.org/raster-time-series) data tutorials. It also covers practical assessment of data quality in remote sensing derived imagery.
 
 ##Downloading Landsat Imagery
-For this tutorial we'll use a new GEE based web app for aquiring Landsat composit imagery (i.e., LS 5-8).
+For this tutorial we'll use a new Google Earth Engine based web app for aquiring Landsat composit imagery (i.e., LS 5-8).
 The web app is found [here](https://ndvi.ntsg.umt.edu/).
 See the associated paper for an in depth description of processing method: [Robinson et al. 2017](http://www.mdpi.com/2072-4292/9/8/863)
 
@@ -29,32 +29,23 @@ rm(required.packages, new.packages)
 
 Set working directory to ensure R can find the file we wish to import
 ```{r}
-setwd("D:/EPA_Data/Master_File/Work_Files/Teaching/DataClass_TimeSeries")
+setwd("C:/Users/jakal/OneDrive - University of Idaho/Documents/GitHub/REM504-DataScience/Lecture_Slides/timeseries_analysis")
 ```
 
 ##Working with NDVI Timeseries from southern NM
 
-Create list of NDVI file paths
+Load NDVI dataset
 ```{r}
-IBPE_NDVI_path <- paste0(getwd(), "/IBPE") 
-all_NDVI_IBPE <- list.files(IBPE_NDVI_path,
-                            full.names = TRUE,
-                            pattern = ".tif$")
-# view list - note the full path, relative to our working directory, is included
-print(all_NDVI_IBPE)
-```
-use gdalinfo to examine one of the geotiffs
-```{r}
-GDALinfo(all_NDVI_IBPE[1])
-```
 
-Now we have a list of all GeoTIFF files in the NDVI directory for IBPE site. Next, we will create a Rasterbrick from this list using the brick() function.
+## Load dataset of Landsat NDVI images for IBPE site of Jornada LTER
+load("~/GitHub/REM504-DataScience/Lecture_Slides/timeseries_analysis/DataClass_TimeSeries.RData")
 
-```{r}
+
 # Create a raster brick of the NDVI time series
 NDVI_IBPE_brick <- brick(stack(all_NDVI_IBPE, bands=1))
 NDVI_QA_IBPE_brick <-  brick(stack(all_NDVI_IBPE, bands=2))
 ```
+Landsat NDVI data were downloaded at GeoTIFF images, read into R, and added to a raster brick/stack. Both NDVI values and the Landsat Quality Assessment (QA) values were imported.
 
 We can explore the GeoTIFF tags (the embedded metadata) in a brick using the same syntax that we used on single-band raster objects in R including: crs() (coordinate reference system), extent() and res() (resolution; specifically yres() and xres()).
 ```{r}
@@ -69,14 +60,15 @@ extent(NDVI_IBPE_brick)
 res(NDVI_IBPE_brick)
 ```
 
-Data are scaled by 100. 
+Plot the first 12 NDVI images from the raster brick
 ```{r}
-NDVI_IBPE_brick <- NDVI_IBPE_brick/100
 plot(NDVI_IBPE_brick[[1:12]], zlim=c(.06, .19), nc=4)
 ```
 
 
 ##LS QA
+The QA band from a landsat or MODIS scene contains information on the quality of each pixel. If there are clouds, shadows, snow, haze, etc. It is denoted in the QA band. This is useful for automatically excluding poor image pixels.
+
 The quality band has the following values:
 10: Pixel composite excludes clouds, cloud shadow, water, and snow
 11: Pixel composite excludes clouds, cloud shadow, water, and snow; and is smoothed
@@ -157,7 +149,7 @@ NDVI_QA_IBPE_brick_proj <- setZ(x = NDVI_QA_IBPE_brick_proj, z = ibpe.ls.dates, 
 
 Here we will us both the zoo and raster packages to process our time-series raster stack
 
-Create quartly NDVI averages
+Create quarterly NDVI averages
 ```{r}
 NDVI_IBPE_yearqrt <- zApply(NDVI_IBPE_brick_proj, by=as.yearqtr, fun=mean, name='quarters')
 #plot avg quarterly values
@@ -182,7 +174,7 @@ levelplot(NDVI_IBPE_yearmon,
 
 Now we will load in some points to extract timeseries from the raster brick
 ```{r}
-points <- readOGR("D:/EPA_Data/Master_File/Work_Files/Teaching/DataClass_TimeSeries", "IBPE_Points")
+## points is a dataset of point locations where field sampling is done
 ts.points <- extract(NDVI_IBPE_brick_proj, points)
 plot(NDVI_IBPE_brick_proj[[1]])
 points(points, pch=16)
@@ -222,12 +214,12 @@ p5.qa <- zoo(ts.qa.points[5,],ibpe.ls.dates)
 autoplot.zoo(p5.qa)
 ```
 
-```{r}
-p1_int <- p1
-p5_int <- p5
-```
 
 ```{r}
+## Let's save the originals for comparison
+p1.orig <- p1
+p5.orig <- p5
+
 p1[p1.qa==30] <- NA
 #Note: for some reason p5.qa is not returning values == 30. p1 and p5 have the same QA so I used p1 to select infilled values for p5.
 p5[p1.qa==30] <- NA
@@ -246,16 +238,25 @@ p1.linear <-zoo(na.interpolation(as.numeric(p1), option = "linear"),ibpe.ls.date
 p1.spline <-zoo(na.interpolation(as.numeric(p1), option = "spline"),ibpe.ls.dates)
 p1.stine <-zoo(na.interpolation(as.numeric(p1), option = "stine"),ibpe.ls.dates)
 
-autoplot.zoo(p1)
-autoplot.zoo(p1.napprox)
-autoplot.zoo(p1.naspline)
-autoplot.zoo(p1.linear)
-autoplot.zoo(p1.spline)
-autoplot.zoo(p1.stine)
-autoplot.zoo(p1_int)
+
+g <- autoplot.zoo(p1.orig)
+
+# Overlay napprox with the original time series
+g + geom_line(data=p1.napprox,aes(x=Index,y=p1.napprox),color="blue") +
+    geom_line(data=p1,aes(x=Index,y=p1),color="red")+
+    ggtitle("napprox with original time series")
+
+# Overlay linear
+g + geom_line(data=p1.linear,aes(x=Index,y=p1.linear),color="blue") +
+    geom_line(data=p1,aes(x=Index,y=p1),color="red")+
+    ggtitle("linear interp w/ original time series")
+
+# Overlay linear
+g + geom_line(data=p1.stine,aes(x=Index,y=p1.stine),color="blue") +
+    geom_line(data=p1,aes(x=Index,y=p1),color="red")+
+    ggtitle("Stine interp w/ original time series")
+
+
 ```
 
-```{r}
-save.image(paste0(getwd(), "/DataClass_TimeSeries.RData"))
-```
 
