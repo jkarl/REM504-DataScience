@@ -169,6 +169,12 @@ As well as:
 >
 >"2010-01-01 12:15:00 UTC" 
 
++ **parse_date_time():** Parse_date_time allows you to search for and match multiple date orders using any character you want. 
+
+>x <- "Monday June 1st 2010 at 4pm"
+>
+>parse_date_time(x, orders = "AmdYIp")
+
 ## Plotting Dates 
 + You can pull dates directly out of a date column for plotting as well 
 
